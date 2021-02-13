@@ -18,12 +18,16 @@ require IK_MY_SHORTCODES_BASE_PATH . 'vendor/autoload.php';
 //require_once IK_MY_SHORTCODES_BASE_PATH . 'inc/classes/Plugin.php';
 
 use IkMyShortcodes\Plugin;
+
 use IkMyShortcodes\Shortcodes\ShortcodeHappyDay;
+use IkMyShortcodes\Shortcodes\ShortcodeSecond;
 
 
-$shortcode = new ShortcodeHappyDay();
+$shortcodeHappyDay = new ShortcodeHappyDay();
+$shortcodeSecond = new ShortcodeSecond();
 $plugin = new Plugin();
 
-$plugin->addShortcode($shortcode);
+$plugin->addShortcode($shortcodeHappyDay);
+$plugin->addShortcode($shortcodeSecond);
 
 $plugin->init();
